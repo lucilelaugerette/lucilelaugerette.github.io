@@ -48,11 +48,15 @@ nav.navbar {
 }
 
 .navbar-brand {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
   color: #000;
   letter-spacing: 0.01em;
+}
+
+.navbar-brand strong {
+  font-weight: 700;
 }
 
 .navbar-nav {
@@ -175,6 +179,36 @@ h2.section-title {
 
 .paper:last-child { border-bottom: none; }
 
+.paper-with-image {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.paper-with-image .paper-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-image {
+  flex: 0 0 180px;
+  width: 180px;
+}
+
+.paper-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.paper-image img[src=""], .paper-image img:not([src]) { display: none; }
+
+@media (max-width: 640px) {
+  .paper-with-image { flex-direction: column; }
+  .paper-image { width: 100%; flex: none; }
+}
+
 .paper-title {
   font-size: 1rem;
   font-weight: 600;
@@ -277,12 +311,20 @@ details.abstract summary:hover { color: #000; }
    TEACHING PAGE
    =========================== */
 .teaching-year {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #999;
-  margin-bottom: 16px;
+  font-size: 1rem;
+  margin: 24px 0 4px;
+}
+
+.teaching-list {
+  list-style: disc;
+  padding-left: 1.6em;
+  margin: 0 0 4px;
+}
+
+.teaching-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
 }
 
 .teaching-entry {
