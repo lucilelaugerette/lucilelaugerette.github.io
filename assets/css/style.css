@@ -117,6 +117,33 @@ main {
 }
 .contact-email:hover { opacity: 0.7; }
 
+.profile-role {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.profile-market { margin-bottom: 18px; }
+
+.profile-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 18px;
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.profile-facts dt {
+  font-weight: 500;
+  color: #555;
+}
+
+.profile-facts dd { margin: 0; }
+
+@media (max-width: 640px) {
+  .profile-facts { grid-template-columns: 1fr; gap: 0; }
+  .profile-facts dd { margin-bottom: 8px; }
+}
+
 .profile-photo {
   width: 210px;
   flex-shrink: 0;
@@ -328,6 +355,12 @@ details.abstract summary:hover { color: #000; }
   margin-bottom: 4px;
 }
 
+.course-hours {
+  color: #777;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .teaching-entry {
   margin-bottom: 26px;
   padding-bottom: 26px;
@@ -366,7 +399,8 @@ footer {
 @media (max-width: 640px) {
   .profile { flex-direction: column-reverse; }
   .profile-photo { width: 150px; }
-  main { padding: 80px 20px 64px; }
-  .navbar-container { padding: 0 18px; }
-  .navbar-nav { gap: 18px; }
+  main { padding: 104px 20px 64px; }
+  nav.navbar { height: auto; padding: 8px 0; }
+  .navbar-container { padding: 0 18px; flex-wrap: wrap; row-gap: 2px; }
+  .navbar-nav { gap: 14px; flex-wrap: wrap; }
 }
