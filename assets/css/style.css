@@ -355,6 +355,21 @@ details.abstract summary:hover { color: #000; }
   margin-bottom: 4px;
 }
 
+.year-list {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px 20px;
+  margin: 0;
+}
+
+.year-list dt { font-weight: 700; }
+.year-list dd { margin: 0; color: #333; }
+
+@media (max-width: 640px) {
+  .year-list { grid-template-columns: 1fr; gap: 0; }
+  .year-list dd { margin-bottom: 12px; }
+}
+
 .course-hours {
   color: #777;
   font-size: 0.9rem;
